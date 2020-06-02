@@ -2,22 +2,22 @@
 
 case $1 in 
 start) 
-
 pwd 
+if [[ -d conf.sh ]]
+then 
+    echo "exist conf.sh"
+	sh conf.sh 
+fi
 
-ls
-#cd /home/admin/application
-#nohup java -jar find-links.jar https://baidu.com & 
-#echo $! > pid  
+cd /home/admin/java-app-demo
+nohup java -jar java-maven-demo-0.0.1.jar &
+echo $! > pid  
 ;;
 stop)
-#pid=`cat pid`
-#kill -9 $pid 
-#rm -rf /home/admin/application
+pid=`cat pid`
+kill -9 $pid 
+rm -rf /home/admin/java-app-demo
 
-pwd
-
-ls
 ;;
 *)
   echo "Usage ${0} start or stop"
