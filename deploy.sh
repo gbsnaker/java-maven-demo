@@ -9,7 +9,6 @@ ls
 #cd /home/admin/application
 #nohup java -jar find-links.jar https://baidu.com & 
 #echo $! > pid  
-break
 ;;
 stop)
 #pid=`cat pid`
@@ -19,7 +18,6 @@ stop)
 pwd
 
 ls
-break
 ;;
 *)
   echo "Usage ${0} start or stop"
