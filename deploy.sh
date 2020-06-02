@@ -12,9 +12,13 @@ ls
 break
 ;;
 stop)
-pid=`cat pid`
-kill -9 $pid 
-rm -rf /home/admin/application
+#pid=`cat pid`
+#kill -9 $pid 
+#rm -rf /home/admin/application
+
+pwd
+
+ls
 break
 ;;
 *)
