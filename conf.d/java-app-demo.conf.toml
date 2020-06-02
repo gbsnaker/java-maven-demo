@@ -1,0 +1,8 @@
+[template]
+src = "java-app-demo.conf.tmpl"
+dest = "java-app-demo.conf"
+keys = [
+    "/test/java-app-demo/url",
+    "/test/java-app-demo/db/host",
+	"/test/java-app-demo/db/port",
+]
