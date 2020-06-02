@@ -19,10 +19,11 @@ echo $! > pid
 ;;
 stop)
 pid=`cat pid`
-ps aux | grep -v grep  | grep pid
+ps aux | grep -v grep  | grep java-maven-demo-0.0.1.jar
 if [ $? == 0 ];then
 kill -9 $pid
 fi
+echo "no run"
 #rm -rf /home/admin/java-app-demo
 
 ;;
