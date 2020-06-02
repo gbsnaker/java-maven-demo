@@ -3,6 +3,8 @@
 case $1 in 
 start) 
 pwd 
+
+cd /home/admin/java-app-demo
 if [[ -d conf.sh ]]
 then 
     echo "exist conf.sh"
