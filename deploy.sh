@@ -1,24 +1,26 @@
-#!/bin/bash 
+#!/bin/bash
 
-case $1 in 
-start) 
-pwd 
+case $1 in
+start)
+pwd
 
 cd /home/admin/java-app-demo
-if [[ -d conf.sh ]]
-then 
+if [[ -f conf.sh ]]
+then
     echo "exist conf.sh"
-	sh conf.sh 
+        sh -x conf.sh
 fi
 
-cd /home/admin/java-app-demo
 nohup java -jar java-maven-demo-0.0.1.jar &
-echo $! > pid  
+echo $! > pid
 ;;
 stop)
 pid=`cat pid`
-kill -9 $pid 
-rm -rf /home/admin/java-app-demo
+ps aux | grep -v grep  | grep pid
+if [ $? == 0 ];then
+kill -9 $pid
+fi
+#rm -rf /home/admin/java-app-demo
 
 ;;
 *)
