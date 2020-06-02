@@ -5,12 +5,15 @@ start)
 pwd
 
 cd /home/admin/java-app-demo
-if [[ -f conf.sh ]]
-then
-    echo "exist conf.sh"
-        sh -x conf.sh
-fi
+#if [[ -f conf.sh ]]
+#then
+#    echo "exist conf.sh"
+#	sh -x conf.sh
+##fi
+confd -onetime -confdir ./ -config-file java-app-demo.conf.toml -backend redis -node 192.168.0.173:6379
 
+
+cd /home/admin/java-app-demo
 nohup java -jar java-maven-demo-0.0.1.jar &
 echo $! > pid
 ;;
