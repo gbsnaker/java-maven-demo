@@ -6,7 +6,7 @@ def log = new log()
 
 node {
     stage("ssh commands "){
-        log.info("branch is: " )
+        log.info("branch is: master" )
     }
 
 }
