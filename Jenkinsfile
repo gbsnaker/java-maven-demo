@@ -9,7 +9,7 @@ maps["shellcommands"] = "mvn clean install"
 
 
 node {
-    stage("maven 构建"){
+    stage("prepare "){
         log.info("start")
 	    
         sh "ls"
