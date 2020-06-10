@@ -6,7 +6,8 @@ def log = new log()
 def maps = [:]
 maps["maven_image"] = "mvn3.3-jdk8"
 maps["shellcommands"] = "mvn clean install"
-
+maps["name"] = "base-group-service"
+maps["branch"] = "ci"
 
 node {
     stage("prepare "){
@@ -17,6 +18,7 @@ node {
         sh "pwd"
     }
 	
+    gitclone(maps)
     xsy_maven(maps)
 	
 }
