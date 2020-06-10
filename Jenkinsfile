@@ -18,7 +18,7 @@ node {
         sh "pwd"
     }
 	
-    // gitclone(maps)
+    gitclone(maps)
     xsy_maven(maps)
 	
 }
