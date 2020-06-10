@@ -11,7 +11,7 @@ maps["shellcommands"] = "mvn clean install"
 node {
     stage("maven 构建"){
         log.info("start")
-	xsy_maven(maps)
+	//xsy_maven(maps)
     }
 	
 }
