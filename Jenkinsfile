@@ -3,10 +3,14 @@
 import com.ingageapp.log.*
 
 def log = new log()
+def maps = []
+maps["maven_image"] = "mvn3.3-jdk8"
+maps["shellcommands"] = "mvn clean install"
+
 
 node {
-    stage("ssh commands "){
-        log.info("branch is: master" )
+    stage("maven 构建"){
+		xsy_maven(maps)
     }
-
+	
 }
