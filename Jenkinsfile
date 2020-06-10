@@ -12,7 +12,11 @@ node {
     stage("maven 构建"){
         log.info("start")
 	    
-         xsy_maven(maps)
+        sh "ls"
+	    
+        sh "pwd"
     }
+	
+    xsy_maven(maps)
 	
 }
