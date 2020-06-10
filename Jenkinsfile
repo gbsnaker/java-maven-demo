@@ -7,7 +7,7 @@ def maps = [:]
 maps["maven_image"] = "mvn3.3-jdk8"
 maps["shellcommands"] = "mvn clean install"
 maps["name"] = "base-group-service"
-maps["branch"] = "ci"
+maps["branch"] = "v2007/ci"
 
 node {
     stage("prepare "){
