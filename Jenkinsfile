@@ -9,21 +9,14 @@ maps["shellcommands"] = "mvn clean install"
 maps["name"] = "base-group-service"
 maps["branch"] = "v2007/ci"
 
-node {
-    stage("prepare "){
-        log.info("start")
-	    
-        sh "ls"
-	    
-        sh "pwd"
+
+pipeline {
+    agent none
+    stages {
+        stage ('Example') {
+            steps {
+                gitclone(maps)
+            }
+        }
     }
-	
-    println "print test env "   
-	
-    println "${BRANCH}"
-    println "${GERRIT_CHANGE_SUBJECT}
-    println "${GERRIT_CHANGE_I}"
-    gitclone(maps)
-    xsy_maven(maps)
-	
 }
