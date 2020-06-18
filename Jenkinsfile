@@ -20,7 +20,7 @@ node {
 	
     println "print test env "   
 	
-    println $BRANCH 
+    println "${BRANCH}"
     println "${GERRIT_CHANGE_SUBJECT}
     println "${GERRIT_CHANGE_I}"
     gitclone(maps)
