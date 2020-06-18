@@ -18,6 +18,11 @@ node {
         sh "pwd"
     }
 	
+    println "print test env "   
+	
+    println $BRANCH 
+    println "${GERRIT_CHANGE_SUBJECT}
+    println "${GERRIT_CHANGE_I}"
     gitclone(maps)
     xsy_maven(maps)
 	
